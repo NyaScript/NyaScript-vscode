@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "NyaScript",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#moveCursor"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.nyascript",
+				"match": "\\bNYa|nYA\\b"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"match": "\\bNYA\\b|\\bnya\\b",
+				"name":"support.function.nyascript"
+			}]
+		},
+		"moveCursor": {
+			"patterns": [{
+				"match": "\\bNya\\b|\\bnyA\\b",
+				"name":"variable"
+			}]
+		},
+		"variables": {
+			"match": "\\bNYAN\\b|\\bnyan\\b|\\bNyAN\\b",
+			"name":"entity"
+		}
+	},
+	"scopeName": "source.nyascript"
+}

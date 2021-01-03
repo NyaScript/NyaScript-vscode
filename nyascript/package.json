@@ -1,0 +1,25 @@
+{
+    "name": "nyascript",
+    "displayName": "NyaScript",
+    "description": "Syntax Highlighting for NyaScript",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "nyascript",
+            "aliases": ["NyaScript", "nyascript"],
+            "extensions": [".nyas"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nyascript",
+            "scopeName": "source.nyascript",
+            "path": "./syntaxes/nyascript.tmLanguage.json"
+        }]
+    }
+}
