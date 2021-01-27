@@ -6,16 +6,31 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#functions"
+			"include": "#methods"
 		},
 		{
 			"include": "#moveCursor"
 		},
 		{
+			"include": "#temp"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#headers"
+		},
+		{
 			"include": "#variables"
 		},
 		{
-			"include": "#operators"
+			"include": "#numbers"
+		},
+		{
+			"include": "#conditions"
+		},
+		{
+			"include": "#functions"
 		}
 	],
 	"repository": {
@@ -25,21 +40,53 @@
 				"match": "\\bNYa|nYA\\b"
 			}]
 		},
-		"functions": {
+		"methods": {
 			"patterns": [{
-				"match": "\\bNYA\\b|\\bnya\\b",
-				"name":"support.function.nyascript"
+				"match": "\\bNYA|nya|Nya\\?|\\?Nya\\b",
+				"name":"keyword"
 			}]
 		},
 		"moveCursor": {
 			"patterns": [{
-				"match": "\\bNya\\b|\\bnyA\\b",
-				"name":"variable"
+				"match": "\\bNya|nyA\\b",
+				"name":"keyword.control"
+			}]
+		},
+		"temp": {
+			"patterns": [{
+				"match": "\\bNYAN|nyan|NyAN\\b",
+				"name":"entity.name.type"
+			}]
+		},
+		"headers": {
+			"patterns": [{
+				"match": "\\bOwO|UwU\\b",
+				"name": "markup.bold"
 			}]
 		},
 		"variables": {
-			"match": "\\bNYAN\\b|\\bnyan\\b|\\bNyAN\\b",
-			"name":"entity"
+			"patterns": [{
+				"match": "\\b#\\w*|\\$\\w*\\b",
+				"name":"variable.name"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"match": "\\d",
+				"name":"constant.numeric"
+			}]
+		},
+		"conditions": {
+			"patterns": [{
+				"match": "\\bgweater\\b|\\blower\\b|\\beqwal\\b",
+				"name": "entity.other.attribute-name"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"match": "(\\s|^)(meow|meOW|MEOW)",
+				"name":"support.function"
+			}]
 		}
 	},
 	"scopeName": "source.nyascript"

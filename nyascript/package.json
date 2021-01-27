@@ -3,9 +3,9 @@
     "displayName": "NyaScript",
     "description": "Syntax Highlighting for NyaScript",
     "version": "0.0.1",
-    "engines": {
+    "engines": { 
         "vscode": "^1.52.0"
-    },
+    }, 
     "categories": [
         "Programming Languages"
     ],
