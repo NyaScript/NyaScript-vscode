@@ -31,18 +31,24 @@
 		},
 		{
 			"include": "#functions"
+		},
+		{
+			"include": "#string"
+		},
+		{
+			"include": "#classes"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.nyascript",
-				"match": "\\bNYa|nYA\\b"
+				"match": "\\bNYa\\b|\\bnYA\\b"
 			}]
 		},
 		"methods": {
 			"patterns": [{
-				"match": "\\bNYA|nya|Nya\\?|\\?Nya\\b",
+				"match": "\\bNYA\\+\\+|\\bnya\\+\\+|\\bNYA\\+|\\bnya\\+|\\bNYA\\b|\\bnya\\b|\\bNya\\?|\\?Nya\\b",
 				"name":"keyword"
 			}]
 		},
@@ -66,7 +72,7 @@
 		},
 		"variables": {
 			"patterns": [{
-				"match": "\\b#\\w*|\\$\\w*\\b",
+				"match": "\\#\\w*|\\$\\w*",
 				"name":"variable.name"
 			}]
 		},
@@ -78,14 +84,32 @@
 		},
 		"conditions": {
 			"patterns": [{
-				"match": "\\bgweater\\b|\\blower\\b|\\beqwal\\b",
+				"match": "\\bgweater\\b|\\blower\\b|\\beqwal\\b|\\bdiwides\\b",
 				"name": "entity.other.attribute-name"
 			}]
 		},
 		"functions": {
 			"patterns": [{
-				"match": "(\\s|^)(meow|meOW|MEOW)",
+				"match": "\\b(meow|meOW|MEOW|MEow)\\b",
 				"name":"support.function"
+			}]
+		},
+		"strings": {
+			"patterns": [{
+				"match": "\\b\"\\w*\"\\b",
+				"name":"string"
+			}]
+		},
+		"classes": {
+			"patterns": [{
+				"match": "\\bCwass\\b|\\bextends\\b|\\bupper\\b",
+				"name":"support.class"
+			},{
+				"match": "->\\w*|#->\\w*|\\|->\\w*|\\sµ\\s",
+				"name":"variable.parameter"
+			},{
+				"match": "/\\w*",
+				"name":"entity.name.function"
 			}]
 		}
 	},
